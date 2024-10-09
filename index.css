@@ -1,0 +1,161 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: #3a3a3a;
+  font-size: larger;
+  font-family: monospace;
+  color: #00ff00;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.prompt{
+  background-color: #000000d3;
+  box-shadow: -1px -1px 4px #ffffff6b;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 65px;
+  padding: 20px;
+  animation: pop 0.2s;
+}
+
+@keyframes pop {
+  0%{
+    transform: scale(0);
+  }100%{
+    transform: scale(1);
+  }
+}
+
+.prompt .warning{
+  color: red;
+}
+
+.prompt .no-btn,
+.prompt .ok-btn{
+  width: 60px;
+  height: 25px;
+  border: none;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-inline: 15px;
+  cursor: pointer;
+}
+
+.prompt .no-btn{
+  background-color: #ff0000;
+}
+
+.prompt .ok-btn{
+  background-color: #00ff00;
+}
+
+
+.container{
+  display: inline-block;
+  width: 470px;
+}
+
+.headers, 
+.todo{
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  gap: 7px;
+}
+
+
+.headers input{
+  height: 25px;
+  color: #00ff00;
+  border: none;
+  background-color: #000000;
+  padding-left: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: monospace;
+  outline: none;
+}
+
+.headers .todo-name::placeholder{
+  color: #00ff0044;
+  font-size: 15px
+}
+
+.todo-name::selection{
+  color: #000000;
+  background-color: #00ff00;
+}
+
+.add-btn{
+  border: none;
+  color: #000000;
+  background-color: #00ff00;
+  font-size: 15px;
+  font-weight: bold;
+  height: 25px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-btn:hover{
+  background-color: #00ff00c5;
+}
+.add-btn:active{
+  font-size: 14px;
+}
+
+.todo{
+  margin-top: 7px;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 3px;
+}
+
+
+
+.action{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 7px;
+}
+
+.action button{
+  font-weight: bold;
+  border: none;
+  height: 20px;
+}
+
+.action .del-btn{
+  background-color: #ff0000;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.action .del-btn:hover{
+  background-color: #ff0000bb;
+}
+.action .del-btn:active{
+  font-size: 12px;
+}
+
+
+.action .edit-btn{
+  background-color: #d9ff00;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.action .edit-btn:hover{
+  background-color: #d9ff00c2;
+}
+.action .edit-btn:active{
+  font-size: 12px;
+}
